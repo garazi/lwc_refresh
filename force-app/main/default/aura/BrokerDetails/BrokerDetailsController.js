@@ -12,7 +12,20 @@
 		toastEvent.fire();
 		helper.showHide(component);
 	},
-	changeEdit : function (component) {
-		alert ("foo")
+	handleCancel : function (component, event, helper) {
+		console.log("foo: ", component.find("editForm").get("v.recordId"))
+		var recId = component.get("v.recordId")
+		var theForm = component.find("editForm").set("v.recordId", "")
+		console.log("foo2: ", component.find("editForm").get("v.recordId"))
+		// helper.showHide(component)
+		event.preventDefault();
+	},
+	foo : function(component,event,helper) {
+		component.find("brokerRecord").set("v.recordId", component.get("v.recordId") )
+		console.log("it fired")
+	},
+	doInit : function(component,event,helper) {
+		console.log("init")
+		// component.find("brokerRecord").set("v.recordId", "a00R000000EtuFDIAZ" )
 	}
 })

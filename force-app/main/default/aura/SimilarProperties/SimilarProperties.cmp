@@ -6,6 +6,7 @@
 	<aura:attribute name="showDialog" type="String" default="false" />
 	<aura:attribute name="searchCriteria" type="String" default="Price" />
 	<aura:attribute name="priceRange" type="String" default="100000" />
+	<aura:attribute name="dynamicList" type="String" />
 	<aura:attribute name="designStatus" type="String" />
 	<aura:attribute name="width" type="String" default="LARGE" />
 	<lightning:flexipageRegionInfo width="{!v.width}" />

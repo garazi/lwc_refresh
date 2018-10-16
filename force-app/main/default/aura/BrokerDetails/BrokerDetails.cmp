@@ -1,7 +1,19 @@
 <aura:component >
 	<aura:attribute name="recordId" type="Id" />
 	<aura:attribute name="myFields" type="String[]" default="['Name','Email__c','Phone__c','Mobile_Phone__c']" />
+	<aura:attribute name="Broker" type="Broker__c" />
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+	<force:recordData aura:id="brokerRecord"
+					  recordId="{!v.recordId}"
+					  targetFields="{!v.Broker}" 
+					  fields="Picture__c" 
+					  layoutType="FULL"
+					  recordUpdated="{!c.foo}" />
+
 	<aura:if isTrue="{!v.recordId}">
+		<aura:if isTrue="{!v.Broker}">Hello: {!v.Broker.Name}</aura:if>
 			<lightning:recordViewForm aura:id="viewForm" recordId="{!v.recordId}" objectApiName="Broker__c">
 				<lightning:layout multipleRows="true">
 					<lightning:layoutItem size="6" class="hWrapper">
@@ -68,7 +80,7 @@
 					<lightning:layoutItem size="1"></lightning:layoutItem>
 				</lightning:layout>
 				<lightning:layout horizontalAlign="center" class="slds-m-top_large">
-						<lightning:button variant="neutral" label="Cancel" title="Cancel" type="text" />
+						<lightning:button variant="neutral" label="Cancel" title="Cancel" type="text" onclick="{! c.handleCancel}" />
 						<lightning:button variant="brand" label="Submit" title="Submit" type="submit" />
 				</lightning:layout>
 			</lightning:recordEditForm>

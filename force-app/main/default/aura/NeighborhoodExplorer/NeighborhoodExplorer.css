@@ -1,11 +1,8 @@
 .THIS {
-    /*position: relative;
-    overflow: hidden;*/
-    /*min-height: 28rem;*/
 }
 
 .THIS.small {
-    /*height: 48rem;*/
+    height: 48rem;
 }
 
 .THIS.medium {

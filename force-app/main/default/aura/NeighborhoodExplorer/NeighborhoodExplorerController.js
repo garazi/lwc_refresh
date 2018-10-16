@@ -4,6 +4,8 @@
         date = date.getTime();
         console.log("Start: ", date);
         component.set("v.defaultSearch", component.get('v.tab1'));
+        var theComponent = component.find("main");
+        $A.util.addClass(theComponent, component.get("v.designHeight"));
     },
     recordUpdated: function(component, event, helper) {
         var date = new Date();

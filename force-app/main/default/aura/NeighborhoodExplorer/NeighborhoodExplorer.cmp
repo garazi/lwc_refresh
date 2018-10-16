@@ -25,14 +25,14 @@
     <aura:attribute name="location" type="Object" />
     <aura:attribute name="address" type="String" />
     <aura:attribute name="defaultSearch" type="String" />
-    <aura:attribute name="designHeight" type="String" />
+    <aura:attribute name="designHeight" type="String" default="small" />
     <aura:attribute name="openItem" type="String" />
     <aura:attribute name="dateTime" type="Integer" />
     <aura:attribute name="resultList" type="Object[]" access="global" />
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
     <aura:handler name="change" value="{!v.currentRecord}" action="{!c.recordUpdated}" />
     <aura:handler name="change" value="{!v.resultList}" action="{!c.hideSpinner}" />
-    <div class="small" aura:id="main">
+    <div aura:id="main">
         <lightning:card iconName="custom:custom96" title="Neighborhood Explorer">
             <lightning:tabset variant="scoped" selectedTabId="schoolList" aura:id="myTabs" onselect="{!c.selectedTab}" class="slds-m-top--small">
                 <lightning:tab label="{!v.tab1}" title="List of restaurants nearby" id="{!v.tab1}" onfocus="{!c.recordUpdated}" />

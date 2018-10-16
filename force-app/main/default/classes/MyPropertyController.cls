@@ -3,7 +3,7 @@ public class MyPropertyController {
      public static List<Property__c> getSimilarProperties (Id recordId, String searchCriteria, Decimal beds, Decimal price, Decimal priceRange ) {
          if (searchCriteria == 'Bedrooms') {
              return [
-                 SELECT Id, Name, Beds__c, Baths__c, Price__c, Broker__c, Status__c, Thumbnail__c, Address__c, City__c, State__c, Description__c, Title__c
+                 SELECT Id, Name, Beds__c, Baths__c, Price__c, Broker__c, Status__c, Thumbnail__c, Address__c, City__c, State__c, Description__c, Title__c,Location__Latitude__s, Location__Longitude__s
                  FROM Property__c WHERE Id != :recordId AND Beds__c = :beds
              ];
          } else {
@@ -14,7 +14,7 @@ public class MyPropertyController {
                  range = priceRange;
              }
              return [
-                 SELECT Id, Name, Beds__c, Baths__c, Price__c, Broker__c, Status__c, Thumbnail__c, Address__c, City__c, State__c, Description__c, Title__c
+                 SELECT Id, Name, Beds__c, Baths__c, Price__c, Broker__c, Status__c, Thumbnail__c, Address__c, City__c, State__c, Description__c, Title__c,Location__Latitude__s, Location__Longitude__s
                  FROM Property__c WHERE Id != :recordId AND Price__c > :price - range AND Price__c < :price + range
              ];
          }
@@ -28,9 +28,16 @@ public class MyPropertyController {
 
      @AuraEnabled
      public static List<Property__c> getMapMarkers (Id recordId, String searchCriteria, Decimal beds, Decimal price, Decimal priceRange) {
-         List<Property__c> foo = getSimilarProperties(recordId,searchCriteria,beds,price,priceRange);
+         List<Property__c> props = getSimilarProperties(recordId,searchCriteria,beds,price,priceRange);
 
 
-         return foo;
+         return props;
+     }
+
+     @AuraEnabled
+     public static List<Property__c> getLocation (Id recordId) {
+         return [
+                 SELECT Id, Name, Beds__c, Baths__c, Price__c, Broker__c, Status__c, Thumbnail__c, Address__c, City__c, State__c, Description__c, Title__c, Location__Latitude__s, Location__Longitude__s
+                 FROM Property__c WHERE Id = :recordId];
      }
 }

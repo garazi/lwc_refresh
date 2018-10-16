@@ -1,0 +1,5 @@
+<design:component>
+    <design:attribute name="title" label="Card Title" />
+    <design:attribute name="icon" label="Card Icon" description="Use category:icon from SLDS" />
+    <design:attribute name="showButton" label="Show Button" datasource="true,false" />
+</design:component>
