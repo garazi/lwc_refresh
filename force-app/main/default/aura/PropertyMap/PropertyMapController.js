@@ -9,7 +9,6 @@
 			title: component.get('v.property.Name'),
 			description: component.get('v.property.Title__c')
 			}]);
-		// helper.makeMap(component);
 	},
 	getProperties: function(component, event, helper) {
 		helper.getProps(component);
@@ -33,7 +32,6 @@
 		for (var i = 0; i < similarProperties.length; i++) {
 			singleProperty = {
 				location: {
-					Street: similarProperties[i].Street__c,
 					Longitude: similarProperties[i].Location__Longitude__s,
 					Latitude: similarProperties[i].Location__Latitude__s
 				},
@@ -44,6 +42,5 @@
 		}
 		component.set("v.mapMarkers", propertiesArray);
 		console.log("list: ", propertiesArray)
-		helper.makeMap(component);
 	}
 })

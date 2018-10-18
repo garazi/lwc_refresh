@@ -1,5 +1,5 @@
 public class MyPropertyController {
-     @AuraEnabled
+    @AuraEnabled
      public static List<Property__c> getSimilarProperties (Id recordId, String searchCriteria, Decimal beds, Decimal price, Decimal priceRange ) {
          if (searchCriteria == 'Bedrooms') {
              return [
@@ -19,6 +19,7 @@ public class MyPropertyController {
              ];
          }
      }
+
 
     public class Marker {
         public string icon {get; set;}
