@@ -2,6 +2,8 @@
     <aura:attribute name="title" type="String" default="Howdy" />
     <aura:attribute name="icon" type="String" />
     <aura:attribute name="showButton" type="String" default="true"/>
+    <aura:attribute name="myfields" type="String[]" 
+    default="['Name', 'StageName','CloseDate']" /> 
     
     <lightning:card title="{!v.title}" iconName="{!v.icon}">
         
@@ -12,7 +14,12 @@
         </aura:set>
         
         <p class="slds-p-horizontal_small">
-            Card Body (custom component)
-        </p>
+
+    
+    <lightning:recordForm 
+objectApiName="Opportunity" 
+fields="{!v.myfields}" 
+columns="1" 
+mode="edit" onsubmit = "{!c.submit}"/>         </p>
     </lightning:card>
 </aura:component>

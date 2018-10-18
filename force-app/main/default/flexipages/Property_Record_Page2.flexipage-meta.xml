@@ -97,21 +97,6 @@
             <componentName>PropertyDaysOnMarketChart</componentName>
         </componentInstances>
         <componentInstances>
-            <componentInstanceProperties>
-                <name>icon</name>
-                <value>standard:announcement</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>showButton</name>
-                <value>true</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>title</name>
-                <value>Whatacard!</value>
-            </componentInstanceProperties>
-            <componentName>supaFast</componentName>
-        </componentInstances>
-        <componentInstances>
             <componentName>ContractUpload</componentName>
             <visibilityRule>
                 <criteria>
@@ -120,6 +105,9 @@
                     <rightValue>Under Contract</rightValue>
                 </criteria>
             </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentName>BrokerCard</componentName>
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
@@ -133,6 +121,21 @@
             <componentInstanceProperties>
                 <name>searchCriteria</name>
                 <value>Price</value>
+            </componentInstanceProperties>
+            <componentName>SimilarProperties</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>dynamicList</name>
+                <value>Listed</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>priceRange</name>
+                <value>100000</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>searchCriteria</name>
+                <value>Bedrooms</value>
             </componentInstanceProperties>
             <componentName>SimilarProperties</componentName>
         </componentInstances>
