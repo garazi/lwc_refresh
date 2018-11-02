@@ -12,8 +12,7 @@
 					  layoutType="FULL"
 					  recordUpdated="{!c.foo}" />
 
-	<aura:if isTrue="{!v.recordId}">
-		<aura:if isTrue="{!v.Broker}">Hello: {!v.Broker.Name}</aura:if>
+	<!-- <aura:if isTrue="{!v.recordId}"> -->
 			<lightning:recordViewForm aura:id="viewForm" recordId="{!v.recordId}" objectApiName="Broker__c">
 				<lightning:layout multipleRows="true">
 					<lightning:layoutItem size="6" class="hWrapper">
@@ -91,5 +90,5 @@
 					layoutType="Full"
 					columns="1"
 					onsuccess="{!c.fireToast}" /> -->
-	</aura:if>
+	<!-- </aura:if> -->
 </aura:component>

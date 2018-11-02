@@ -51,7 +51,8 @@
 		aura:id="brokerForm"
 		recordId="{!v.Property.Broker__c}"
 		objectApiName="Broker__c"
-		layoutType="Full"
+		layoutType="Compact"
+		fields="Picture__c"
 		columns="1" 
 		mode="View" /> -->
 

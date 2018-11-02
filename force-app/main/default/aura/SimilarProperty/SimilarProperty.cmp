@@ -30,6 +30,9 @@
                     <lightning:layoutItem size="6"  >
                         <lightning:outputField fieldName="Status__c" />
                     </lightning:layoutItem>
+                    <lightning:layoutItem size="12"  >
+                        <lightning:outputField fieldName="Broker__c" />
+                    </lightning:layoutItem>
                 </lightning:layout>
             </div>
         </div>	
@@ -57,6 +60,9 @@
                     </lightning:layoutItem>
                     <lightning:layoutItem size="6"  >
                         <lightning:inputField fieldName="Status__c" />
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="12"  >
+                        <lightning:inputField fieldName="Broker__c" />
                     </lightning:layoutItem>
                 </lightning:layout>
                 <lightning:layout horizontalAlign="center" class="slds-m-top_large">
