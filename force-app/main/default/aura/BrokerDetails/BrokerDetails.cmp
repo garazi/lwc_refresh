@@ -70,11 +70,11 @@
 					</lightning:layoutItem>
 					<lightning:layoutItem size="1"></lightning:layoutItem>
 					<lightning:layoutItem size="5">
-						<lightning:outputField fieldName="Phone__c" />
+						<lightning:inputField fieldName="Phone__c" />
 					</lightning:layoutItem>
 					<lightning:layoutItem size="1"></lightning:layoutItem>
 					<lightning:layoutItem size="5">
-						<lightning:inputField fieldName="Mobile_Phone__c" />
+						<lightning:outputField fieldName="Mobile_Phone__c" />
 					</lightning:layoutItem>
 					<lightning:layoutItem size="1"></lightning:layoutItem>
 				</lightning:layout>

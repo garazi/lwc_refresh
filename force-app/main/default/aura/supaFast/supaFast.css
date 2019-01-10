@@ -1,7 +1,7 @@
 .THIS {
-
+    position: relative;
 }
-.THIS .disabledTab {
-    pointer-events: none;
-    opacity: 0.7;
+.THIS .foo {
+height: 20rem;
+max-height: 22rem;
 }

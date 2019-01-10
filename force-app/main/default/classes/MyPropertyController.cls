@@ -1,5 +1,5 @@
 public class MyPropertyController {
-    @AuraEnabled
+    @AuraEnabled(cacheable=true)
      public static List<Property__c> getSimilarProperties (Id recordId, String searchCriteria, Decimal beds, Decimal price, Decimal priceRange ) {
          if (searchCriteria == 'Bedrooms') {
              return [

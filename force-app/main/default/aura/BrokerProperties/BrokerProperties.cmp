@@ -18,7 +18,7 @@
                       fields="Picture__c" 
                       layoutType="FULL"  />
     
-    <lightning:card iconName="custom:custom85" title="{! 'Propertiesz for ' + v.brokerRecord.Name }">
+    <lightning:card iconName="custom:custom85" title="{! 'Properties for ' + v.brokerRecord.Name }">
           <lightning:datatable aura:id="datatable" 
                                data="{!v.propertyRecords}" 
                                columns="{!v.columns}" 

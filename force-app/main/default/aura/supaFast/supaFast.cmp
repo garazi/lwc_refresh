@@ -1,41 +1,31 @@
 <aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
-    <aura:attribute name="currentStep" type="String" default="1" />
-    <aura:attribute name="completedStep" type="String" default="0" />
+	<aura:attribute name="recordId" type="Id" />
+	<aura:attribute name="myVal" type="String" default="hello" />
+	<aura:attribute name="maxChar" type="Integer" default="10" />
+	<aura:attribute name="currentChar" type="Integer" />
+
+  <force:recordData aura:id="propertyService" recordId="{!v.recordId}" targetRecord="{!v.property}"  layoutType="FULL" />
 
 	<lightning:card title="A Simple Demo" iconName="custom:custom42">
 		<div class="slds-p-horizontal_small">
-                <aura:if isTrue="{!v.currentStep == '1'}">
-                        <div aura:id="step1">
-                            <p>this is step 1</p>
-                            <lightning:button variant="brand" label="Do It" title="Move" onclick="{! c.handleClick}" value="1" />
-                        </div>
-                    </aura:if>
-                    <aura:if isTrue="{!v.currentStep == '2'}">
-                        <div aura:id="step1">
-                            <p>this is step 2</p> 
-                            <lightning:button variant="brand" label="Do It" title="Move" onclick="{! c.handleClick}" value="2" />
-                        </div>
-                    </aura:if>
-                    <aura:if isTrue="{!v.currentStep == '3'}">
-                        <div aura:id="step1">
-                            <p>this is step 3</p> 
-                            <lightning:button variant="brand" label="Do It" title="Move" onclick="{! c.handleClick}" value="3" />
-                        </div>
-                    </aura:if>
-                    <aura:if isTrue="{!v.currentStep == '4'}">
-                        <div aura:id="step1">
-                            <p>YOU ARE DONE</p> 
-                        </div>
-                    </aura:if>
-
-			<lightning:progressIndicator aura:id="progressCmp" currentStep="{!v.currentStep}" type="base" hasError="false" variant="base" class="slds-m-top_large">
-				<lightning:progressStep label="Step 1" value="1" onclick="{!c.handleStep}" />
-				<lightning:progressStep label="Step 2" value="2" onclick="{!c.handleStep}" />
-				<lightning:progressStep label="Step 3" value="3" onclick="{!c.handleStep}" />
-				<lightning:progressStep label="Step 4" value="4" onclick="{!c.handleStep}" />
-            </lightning:progressIndicator>
-
-			
+				<lightning:formattedAddress street="121 Spear St." city="San Francisco" country="US" province="CA" postalCode="94105" showStaticMap="false" />
+				<lightning:inputAddress street="121 Spear St." city="San Francisco" country="US" province="CA" postalCode="94105" showAddressLookup="true" />
+				<lightning:input type="number" name="input1" label="Enter a number" />
+				<!-- <lightning:textarea
+				aura:id="myTextarea"
+        type="text"
+        value="test1" 
+        required="true"
+        messageWhenPatternMismatch="Too many characters!"
+				pattern=".{0,10}"
+				maxlength="{!v.maxChar}"
+        name="input-name"
+				label="Enter up to 10 characters"
+				onchange="{!c.handleChange}"
+				/>
+				<p>{!v.currentChar} / {!v.maxChar}</p>
+				<lightning:input type="text" messageWhenPatternMismatch="Too many characters!" pattern=".{0,5}" name="input-name" label="Enter up to 5 characters" /> -->
+				<lightning:inputRichText value="{!v.myVal}" placeholder="Type something interesting" class="foo"/>
 		</div>
 	</lightning:card>
 </aura:component>

@@ -14,14 +14,15 @@
 			console.log("NOW: ", component.get("v.currentStep"))
 		}
 	},
-	handleClick: function(component, event, helper) {
-		var currentStep = event.getSource().get("v.value");
-    component.set("v.completedStep", currentStep);
-    var nextStep = parseInt(currentStep, 10) + 1
-    nextStep = nextStep.toString();
-    var tmp = component.find("progressCmp");
-    tmp.set("v.hasError", false);
-    component.set("v.currentStep", nextStep);
-    console.log("new value: ", component.get("v.currentStep"))
+	handleChange: function(component, event, helper) {
+		var textarea = component.find("myTextarea");
+		var textareaVal = event.getSource().get("v.value");
+		component.set("v.currentChar", textareaVal.length);
+		if(textareaVal.length == component.get("v.maxChar")) {
+			 textarea.setCustomValidity("You have reached the maximum number of characters");
+		}
+		else {
+			 textarea.setCustomValidity("");
+		}
 	}
 })

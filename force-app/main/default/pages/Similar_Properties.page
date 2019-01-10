@@ -26,12 +26,13 @@
     var myUserContext = "{!$User.UITheme}";
     $Lightning.use("c:SimilarPropertiesApp", function() {
         $Lightning.createComponent("c:BuildAForm",
-                                   {recordId: recordId,
+                                {
+                                    recordId: recordId,
                                     sObjectName: 'Property__c',
                                     title: 'This is my Card',
                                     numberOfColumns: '2',
                                     mode: 'view',
-                                    fieldsToDisplay: 'Name,Address__c'
+                                    fieldsToDisplay: 'Name,Address__c,Broker__c'
                                 },
                                    "lightningComponent",
                                    function(cmp) {

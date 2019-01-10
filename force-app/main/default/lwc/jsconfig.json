@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/hello-world": [
+                "helloWorld/helloWorld.js"
+            ],
+            "c/sim-prop": [
+                "simProp/simProp.js"
+            ],
+            "c/sim-prop-child": [
+                "simPropChild/simPropChild.js"
+            ],
+            "c/leaflet": [
+                "../staticresources/Leaflet/Leaflet.js"
+            ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ]
+}

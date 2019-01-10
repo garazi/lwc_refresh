@@ -13,6 +13,12 @@
           typeAttributes: { label: { fieldName: "Name" } }
         },
         {
+          label: "Baths",
+          fieldName: "Baths__c",
+          type: "number",
+          sortable: "true"
+        },
+        {
           label: "Status",
           fieldName: "Status__c",
           sortable: "true"
@@ -33,6 +39,7 @@
           element.url = "/one/one.app#/sObject/" + element.Id;
         });
         component.set("v.propertyRecords", propertyList);
+        console.log("props: ", propertyList)
       })
       $A.enqueueAction(action);
     },

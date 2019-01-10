@@ -17,7 +17,7 @@
 		var recId = component.get("v.recordId")
 		var theForm = component.find("editForm").set("v.recordId", "")
 		console.log("foo2: ", component.find("editForm").get("v.recordId"))
-		// helper.showHide(component)
+		helper.showHide(component)
 		event.preventDefault();
 	},
 	foo : function(component,event,helper) {

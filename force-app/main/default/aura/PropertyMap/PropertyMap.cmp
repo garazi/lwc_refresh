@@ -17,10 +17,10 @@
 			fields="Location__Latitude__s, Location__Longitude__s"
             recordUpdated="{! c.getProperties}" />
 
-	<lightning:card title="{!'Map for ' + v.property.Name}" iconName="custom:custom106">
+	<lightning:card title="{!'Mapz for ' + v.property.Name}" iconName="custom:custom106">
 		<div class="slds-p-horizontal_medium slds-p-bottom_medium">
 		<aura:if isTrue="{! v.mapMarkers.length > 0}">
-			<lightning:map mapMarkers="{! v.mapMarkers }" markersTitle="Similar Properties" zoomLevel="13" class="{! (v.width=='SMALL'?'small slds-grid_vertical slds-nowrap':'')}" />
+			<lightning:map mapMarkers="{! v.mapMarkers }" markersTitle="Similar Properties" zoomLevel="13" class="{! (v.width=='SMALL'?'small slds-grid_vertical slds-nowrap':'') }" />
 		</aura:if>
 	</div>
 	</lightning:card>
