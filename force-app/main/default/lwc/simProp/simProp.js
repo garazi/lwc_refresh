@@ -1,5 +1,7 @@
 import { LightningElement,api,track,wire } from 'lwc';
 import { getRecord } from 'lightning/uiRecordApi';
+import { registerListener, unregisterAllListeners, fireEvent } from 'c/pubsub';
+import { CurrentPageReference } from 'lightning/navigation';
 
 import getSimilarProperties from '@salesforce/apex/MyPropertyController.getSimilarProperties';
 
@@ -20,6 +22,8 @@ export default class SimProp extends LightningElement {
     @track cardTitle;
     @api searchCriteria;
     @api priceRange = '100000';
+
+    @wire(CurrentPageReference) pageRef;
 
     @wire(getRecord, {recordId: '$recordId', fields})
     wiredProperty(value) {
@@ -61,6 +65,6 @@ export default class SimProp extends LightningElement {
         unregisterAllListeners(this);
     }
     handleNewSelection() {
-        
+        console.log("I HEARD THE EVENT")
     }
 }
