@@ -12,7 +12,7 @@
 					  layoutType="FULL"
 					  recordUpdated="{!c.foo}" />
 
-	<!-- <aura:if isTrue="{!v.recordId}"> -->
+	<aura:if isTrue="{!v.recordId}">
 			<lightning:recordViewForm aura:id="viewForm" recordId="{!v.recordId}" objectApiName="Broker__c">
 				<lightning:layout multipleRows="true">
 					<lightning:layoutItem size="6" class="hWrapper">
@@ -59,7 +59,7 @@
 			</lightning:recordViewForm>
 
 			<lightning:recordEditForm aura:id="editForm" recordId="{!v.recordId}" objectApiName="Broker__c" class="slds-hide" onsubmit="{!c.fireToast}">
-				<!-- <lightning:messages /> -->
+				<lightning:messages />
 				<lightning:layout multipleRows="true">
 					<lightning:layoutItem size="5">
 						<lightning:inputField aura:id="nameField" fieldName="Name" />
@@ -90,5 +90,5 @@
 					layoutType="Full"
 					columns="1"
 					onsuccess="{!c.fireToast}" /> -->
-	<!-- </aura:if> -->
+	</aura:if>
 </aura:component>

@@ -6,6 +6,9 @@
             "c/hello-world": [
                 "helloWorld/helloWorld.js"
             ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ],
             "c/sim-prop": [
                 "simProp/simProp.js"
             ],
@@ -15,8 +18,11 @@
             "c/leaflet": [
                 "../staticresources/Leaflet/Leaflet.js"
             ],
-            "c/pubsub": [
-                "pubsub/pubsub.js"
+            "c/broker-card-lwc": [
+                "brokerCardLWC/brokerCardLWC.js"
+            ],
+            "c/aura-pubsub": [
+                "auraPubsub/auraPubsub.js"
             ]
         }
     },

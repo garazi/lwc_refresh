@@ -22,6 +22,10 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>NONE</value>
+            </componentInstanceProperties>
             <componentName>force:relatedListContainer</componentName>
         </componentInstances>
         <mode>Replace</mode>
@@ -97,6 +101,16 @@
             <componentName>PropertyDaysOnMarketChart</componentName>
         </componentInstances>
         <componentInstances>
+            <componentName>helloWorld</componentName>
+            <visibilityRule>
+                <criteria>
+                    <leftValue>{!Record.Status__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>Sold</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
             <componentName>ContractUpload</componentName>
             <visibilityRule>
                 <criteria>
@@ -105,6 +119,24 @@
                     <rightValue>Under Contract</rightValue>
                 </criteria>
             </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>priceRange</name>
+                <value>50000</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>searchCriteria</name>
+                <value>Price</value>
+            </componentInstanceProperties>
+            <componentName>simProp</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>searchCriteria</name>
+                <value>Bedrooms</value>
+            </componentInstanceProperties>
+            <componentName>simProp</componentName>
         </componentInstances>
         <componentInstances>
             <componentName>BrokerCard</componentName>

@@ -13,6 +13,8 @@
 						"type": "success"
 					});
 					toastEvent.fire();
+					var pubsub = component.find('pubsub');
+        			pubsub.fireEvent('startAnimation',stepName);
 				}
 			}));
 	}

@@ -2,14 +2,15 @@ import { LightningElement,api,track,wire } from 'lwc';
 import { getRecord } from 'lightning/uiRecordApi';
 import { registerListener, unregisterAllListeners, fireEvent } from 'c/pubsub';
 import { CurrentPageReference } from 'lightning/navigation';
-
+import { refreshApex } from '@salesforce/apex';
 import getSimilarProperties from '@salesforce/apex/MyPropertyController.getSimilarProperties';
 
 const fields = [
     'Property__c.Name',
     'Property__c.Price__c',
     'Property__c.Status__c',
-    'Property__c.Beds__c'
+    'Property__c.Beds__c',
+    'Property__c.Broker__c'
 ]
 
 export default class SimProp extends LightningElement {
@@ -58,13 +59,13 @@ export default class SimProp extends LightningElement {
     }
 
     connectedCallback() {
-        registerListener('propertyUpdated', this.handleNewSelection, this);
+        registerListener('propertyUpdated', this.refreshSelection, this);
     }
 
     disconnectedCallback() {
         unregisterAllListeners(this);
     }
-    handleNewSelection() {
-        console.log("I HEARD THE EVENT")
+    refreshSelection() {
+        refreshApex(this.wiredRecords);
     }
 }

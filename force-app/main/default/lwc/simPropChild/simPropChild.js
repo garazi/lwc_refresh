@@ -34,6 +34,7 @@ export default class SimPropChild extends NavigationMixin(LightningElement) {
             });
             this.dispatchEvent(evt);
             fireEvent(this.pageRef, 'propertyUpdated');
+            fireEvent(this.pageRef, "startAnimation");
             this.editMode=false;
     }
 

@@ -1,4 +1,15 @@
-.foo {
-    height: 25rem;
-    max-height: 30rem;
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: lightskyblue;
+    position: absolute;
+    opacity: .6;
+}
+.container {
+    position: absolute;
+    z-index: 99999999;
+}
+.hideIt {
+    display: none;
 }

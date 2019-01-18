@@ -1,15 +1,22 @@
-<aura:component controller="BrokerSelect" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
-	<aura:attribute name="recordId" type="Id" />
-	<aura:attribute name="Property" type="Property__c" />
-	<aura:attribute name="Broker" type="Broker__c" />
-	<aura:attribute name="BrokerFields" type="String[]" default="Name,Email__c,Mobile_Phone__c,Title__c" />
-			
+<aura:component controller="BrokerSelect"
+                implements="flexipage:availableForRecordHome,force:hasRecordId"
+                access="global">
+	<aura:attribute name="recordId"
+	                type="Id" />
+	<aura:attribute name="Property"
+	                type="Property__c" />
+	<aura:attribute name="Broker"
+	                type="Broker__c" />
+	<aura:attribute name="BrokerFields"
+	                type="String[]"
+	                default="Name,Email__c,Mobile_Phone__c,Title__c" />
+
 	<!-- <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> -->
 
-	<force:recordData aura:id="propertyRecord" 
-					  recordId="{!v.recordId}" 
-					  targetFields="{!v.Property}" 
-					  layoutType="FULL" 
+	<force:recordData aura:id="propertyRecord"
+					  recordId="{!v.recordId}"
+					  targetFields="{!v.Property}"
+					  layoutType="FULL"
 					  recordUpdated="{!c.updateBroker}" />
 
 	<force:recordData aura:id="brokerRecord" 
@@ -20,7 +27,7 @@
 	<lightning:card iconName="standard:user" title="{! 'Broker for ' + v.Property.Name}">
 		 <div class="slds-p-left_large slds-p-right_medium">
 
-			<!-- <div class="slds-media">
+			<div class="slds-media">
 				<div class="slds-media__figure">
 					<img src="{!v.Broker.Picture__c}" class="slds-avatar_large slds-avatar_circle" alt="{!v.Broker.Title_c}" />
 				</div>
@@ -38,14 +45,15 @@
 						</ul>
 					</div>
 				</div> 
-			</div> -->
+			</div>
+
+
 
 			<!-- <aura:if isTrue="{!v.Broker.Id}"> -->
-
-
-			<c:BrokerDetails recordId="{!v.Property.Broker__c}" />
-
+			<!-- <c:BrokerDetails recordId="{!v.Property.Broker__c}" /> -->
 		<!-- </aura:if> -->
+
+
 
 		<!-- <lightning:recordForm 
 		aura:id="brokerForm"
@@ -53,13 +61,8 @@
 		objectApiName="Broker__c"
 		layoutType="Compact"
 		fields="Picture__c"
-		columns="1" 
-		mode="View" /> -->
+		columns="1"  /> -->
 
 		</div>
 	</lightning:card>
 </aura:component>
-
-
-
-	
