@@ -8,7 +8,7 @@
 
 	<lightning:card title="A Simple Demo" iconName="custom:custom42">
 		<div class="slds-p-horizontal_small">
-				<lightning:formattedAddress street="121 Spear St." city="San Francisco" country="US" province="CA" postalCode="94105" showStaticMap="false" />
+				<lightning:formattedAddress street="121 Spear St." city="San Francisco" country="US" province="CA" postalCode="94105" showStaticMap="true" />
 				<lightning:inputAddress street="121 Spear St." city="San Francisco" country="US" province="CA" postalCode="94105" showAddressLookup="true" />
 				<lightning:input type="number" name="input1" label="Enter a number" />
 				<!-- <lightning:textarea

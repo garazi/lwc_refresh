@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="formBuilder">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+      <target>lightning__AppPage</target>
+      <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+      <targetConfig targets="lightning__RecordPage">
+          <property name="recordId" type="Id" label="Record Id" type="String" />
+          <property name="sObjectName" type="String" label="Object Name" />
+          <property name="fieldsToDisplay" type="String" label="Fields to Display" default="Id" />
+          <property name="title" type="String" label="Card Title" />
+          <property name="icon" type="String" label="Icon Name" />
+          <property name="layoutType" type="String" label="Layout Type" />
+          <property name="numberOfColumns" type="String" label="Number of Columns" />
+          <property name="mode" type="String" label="Mode" datasource="view,edit,readonly" default="edit" />
+          <objects>
+              <object>Property__c</object>
+          </objects>
+      </targetConfig>
+  </targetConfigs>
+</LightningComponentBundle>

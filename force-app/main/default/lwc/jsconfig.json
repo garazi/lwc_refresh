@@ -3,6 +3,15 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/aura-pubsub": [
+                "auraPubsub/auraPubsub.js"
+            ],
+            "c/broker-card-lwc": [
+                "brokerCardLWC/brokerCardLWC.js"
+            ],
+            "c/celebration": [
+                "celebration/celebration.js"
+            ],
             "c/hello-world": [
                 "helloWorld/helloWorld.js"
             ],
@@ -18,11 +27,8 @@
             "c/leaflet": [
                 "../staticresources/Leaflet/Leaflet.js"
             ],
-            "c/broker-card-lwc": [
-                "brokerCardLWC/brokerCardLWC.js"
-            ],
-            "c/aura-pubsub": [
-                "auraPubsub/auraPubsub.js"
+            "c/form-builder": [
+                "formBuilder/formBuilder.js"
             ]
         }
     },

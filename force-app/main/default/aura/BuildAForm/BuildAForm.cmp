@@ -14,7 +14,6 @@
     
     <lightning:card iconName="{! v.icon}" title="{! v.title}">
         <div class="slds-p-left_large slds-p-right_medium">
-            <p>hello</p>
             <lightning:recordForm aura:id="recordForm" 
                                   recordId="{!v.recordId}" 
                                   objectApiName="{!v.sObjectName}"

@@ -1,0 +1,13 @@
+<template>
+    <lightning-card icon-name={icon} title={title}>
+        <div class="slds-p-left_large slds-p-right_medium">
+            <lightning-record-form record-id = {recordId} 
+                                  object-api-name = {sObjectName}
+                                  fields = {fieldsArray}
+                                  columns = {numberOfColumns}
+                                  mode = {mode}
+                                  onsuccess = {showToast}></lightning-record-form>
+            
+        </div>
+    </lightning-card>
+</template>

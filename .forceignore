@@ -4,5 +4,5 @@
 
 package.xml
 **/jsconfig.json
-
+**profiles
 **/.eslintrc.json
