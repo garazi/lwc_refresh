@@ -1,21 +1,12 @@
 <template>
-  <!-- <lightning-card title="confetti" icon-name="custom:custom14">
-    <div class="slds-m-around_medium"> -->
-
-        <div id="container" class={cssClasses}>
-            <div class="circle">
-            </div>
-            <div class="circle">
-            </div>
-            <div class="circle">
-            </div>
-            <div class="circle">
-            </div>
-            <div class="circle">
-            </div>
-            <div class="circle">
-            </div>
-        </div>
-    <!-- </div>
-  </lightning-card> -->
+  <lightning-card title="confetti" icon-name="custom:custom14">
+    <div class="slds-m-around_medium">
+        <lightning-record-form object-api-name='Property__c'
+        record-id={recordId}
+        mode='View'
+        columns="1"
+        layout-type="Compact"
+        ></lightning-record-form>
+    </div>
+  </lightning-card>
 </template>

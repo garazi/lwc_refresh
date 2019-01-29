@@ -8,9 +8,17 @@
 
 	<lightning:card title="A Simple Demo" iconName="custom:custom42">
 		<div class="slds-p-horizontal_small">
-				<lightning:formattedAddress street="121 Spear St." city="San Francisco" country="US" province="CA" postalCode="94105" showStaticMap="true" />
+				<!-- <lightning:inputRichText
+				value="{!v.myVal}"
+				disableCategories="FORMAT_TEXT"
+				formats="['font', 'size', 'bold', 'italic', 'underline',
+                   'strike', 'list', 'indent', 'align', 'link',
+                   'image', 'clean', 'table', 'header', 'color']">>
+				</lightning:inputRichText> -->
+
+				<!-- <lightning:formattedAddress street="121 Spear St." city="San Francisco" country="US" province="CA" postalCode="94105" showStaticMap="true" />
 				<lightning:inputAddress street="121 Spear St." city="San Francisco" country="US" province="CA" postalCode="94105" showAddressLookup="true" />
-				<lightning:input type="number" name="input1" label="Enter a number" />
+				<lightning:input type="number" name="input1" label="Enter a number" /> -->
 				<!-- <lightning:textarea
 				aura:id="myTextarea"
         type="text"

@@ -8,14 +8,14 @@
     </targets>
     <targetConfigs>
       <targetConfig targets="lightning__RecordPage">
-          <property name="recordId" type="Id" label="Record Id" type="String" />
-          <property name="sObjectName" type="String" label="Object Name" />
-          <property name="fieldsToDisplay" type="String" label="Fields to Display" default="Id" />
-          <property name="title" type="String" label="Card Title" />
-          <property name="icon" type="String" label="Icon Name" />
-          <property name="layoutType" type="String" label="Layout Type" />
-          <property name="numberOfColumns" type="String" label="Number of Columns" />
-          <property name="mode" type="String" label="Mode" datasource="view,edit,readonly" default="edit" />
+      <property name="object" label="Object" type="String" />
+      <property name="record" label="Record Id" type="String" />
+      <property name="title" label="Card Title" type="String" />
+      <property name="icon" label="Card Icon" type="String" />
+      <property name="fieldsToDisplay" label="Fields to Display" type="String" />
+      <property name="layout" label="Layout Type" type="String" datasource="Full,Compact,None" default="None" />
+      <property name="columns" label="Number of Columns" type="String" default="1" />
+      <property name="mode" label="Form Mode" type="String" datasource="view,edit,readonly" default="view" />
           <objects>
               <object>Property__c</object>
           </objects>

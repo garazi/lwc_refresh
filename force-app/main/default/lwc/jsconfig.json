@@ -12,6 +12,9 @@
             "c/celebration": [
                 "celebration/celebration.js"
             ],
+            "c/form-builder": [
+                "formBuilder/formBuilder.js"
+            ],
             "c/hello-world": [
                 "helloWorld/helloWorld.js"
             ],
@@ -26,9 +29,6 @@
             ],
             "c/leaflet": [
                 "../staticresources/Leaflet/Leaflet.js"
-            ],
-            "c/form-builder": [
-                "formBuilder/formBuilder.js"
             ]
         }
     },

@@ -1,13 +1,16 @@
 <template>
-    <lightning-card icon-name={icon} title={title}>
+    <lightning-card icon-name={icon}
+                    title={title}>
         <div class="slds-p-left_large slds-p-right_medium">
-            <lightning-record-form record-id = {recordId} 
-                                  object-api-name = {sObjectName}
-                                  fields = {fieldsArray}
-                                  columns = {numberOfColumns}
-                                  mode = {mode}
-                                  onsuccess = {showToast}></lightning-record-form>
-            
+            <template if:true={object}>
+                <lightning-record-form object-api-name={object}
+                                       record-id={record}
+                                       mode={mode}
+                                       columns={columns}></lightning-record-form>
+            </template>
+            <template if:false={object}>
+                <h3>Please associate an Object with this form.</h3>
+            </template>
         </div>
     </lightning-card>
 </template>

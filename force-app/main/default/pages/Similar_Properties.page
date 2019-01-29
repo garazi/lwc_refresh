@@ -30,6 +30,7 @@
                                     recordId: recordId,
                                     sObjectName: 'Property__c',
                                     title: 'This is my Card',
+                                    icon: 'custom:custom85',
                                     numberOfColumns: '2',
                                     mode: 'view',
                                     fieldsToDisplay: 'Name,Address__c,Broker__c'
