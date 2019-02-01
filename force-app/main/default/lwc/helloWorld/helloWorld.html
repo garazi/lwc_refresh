@@ -1,12 +1,8 @@
 <template>
-  <lightning-card title="confetti" icon-name="custom:custom14">
+  <lightning-card title={title} icon-name="custom:custom14">
     <div class="slds-m-around_medium">
-        <lightning-record-form object-api-name='Property__c'
-        record-id={recordId}
-        mode='View'
-        columns="1"
-        layout-type="Compact"
-        ></lightning-record-form>
+        Hello {greeting}
+        <lightning-input label="Greeting" value={greeting} onchange={changeHandler}></lightning-input>
     </div>
   </lightning-card>
 </template>

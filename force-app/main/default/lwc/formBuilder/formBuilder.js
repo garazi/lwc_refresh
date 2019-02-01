@@ -1,7 +1,6 @@
 import { LightningElement, api, track } from 'lwc';
 
 export default class formBuilder extends LightningElement {
-    // Flexipage provides recordId and objectApiName
     @api recordId;
     @api objectApiName;
     @api fieldsToDisplay = '';
@@ -31,6 +30,12 @@ export default class formBuilder extends LightningElement {
         if (this.fieldsToDisplay !== '') {
             this.fields = this.fieldsToDisplay.split(",");
             form.fields = this.fields;
+        }
+
+        if (this.record === 'this') {
+            form.recordId = this.recordId;
+        } else if (this.record !== '') {
+            form.recordId = this.record;
         }
 
     }

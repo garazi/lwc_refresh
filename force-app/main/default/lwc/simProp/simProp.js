@@ -1,6 +1,6 @@
 import { LightningElement,api,track,wire } from 'lwc';
 import { getRecord } from 'lightning/uiRecordApi';
-import { registerListener, unregisterAllListeners, fireEvent } from 'c/pubsub';
+import { registerListener, unregisterAllListeners } from 'c/pubsub';
 import { CurrentPageReference } from 'lightning/navigation';
 import { refreshApex } from '@salesforce/apex';
 import getSimilarProperties from '@salesforce/apex/MyPropertyController.getSimilarProperties';
@@ -38,7 +38,6 @@ export default class SimProp extends LightningElement {
             console.log("OOOPS: ", value.error)
         }
     }
-
 
     @wire(getSimilarProperties, { 
         recordId: '$recordId',

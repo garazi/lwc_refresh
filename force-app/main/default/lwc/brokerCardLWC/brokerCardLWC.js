@@ -1,6 +1,5 @@
 import { LightningElement, api, track, wire } from 'lwc';
-import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import { getRecord } from 'lightning/uiRecordApi';
+ximport { getRecord } from 'lightning/uiRecordApi';
 
 const fields = [
     'Property__c.Name',

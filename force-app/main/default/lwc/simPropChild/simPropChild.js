@@ -6,7 +6,6 @@ import { CurrentPageReference } from 'lightning/navigation';
 
 export default class SimPropChild extends NavigationMixin(LightningElement) {
     @api theitem;
-
     @track editMode=false;
 
     @wire(CurrentPageReference) pageRef;
