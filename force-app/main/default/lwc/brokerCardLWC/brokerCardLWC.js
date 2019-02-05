@@ -1,5 +1,5 @@
 import { LightningElement, api, track, wire } from 'lwc';
-ximport { getRecord } from 'lightning/uiRecordApi';
+import { getRecord } from 'lightning/uiRecordApi';
 
 const fields = [
     'Property__c.Name',
