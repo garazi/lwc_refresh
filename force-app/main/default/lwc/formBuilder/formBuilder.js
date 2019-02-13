@@ -24,6 +24,9 @@ export default class formBuilder extends LightningElement {
         let form = this.template.querySelector('lightning-record-form');
 
         if (this.layout !== 'None') {
+            if (this.layout == 'Compact') {
+                form.recordId = '';
+            }
             form.layoutType = this.layout;
         }
 

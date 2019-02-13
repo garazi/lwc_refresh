@@ -9,6 +9,9 @@
             "c/broker-card-lwc": [
                 "brokerCardLWC/brokerCardLWC.js"
             ],
+            "c/business-explorer": [
+                "businessExplorer/businessExplorer.js"
+            ],
             "c/celebration": [
                 "celebration/celebration.js"
             ],

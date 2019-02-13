@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Business Explorer"
+                    icon-name="custom:custom96">
+        <div class="slds-p-horizontal_medium">
+            <lightning-map map-markers={mapMarkers}
+                           markers-title="In the area" class="mapConfig"></lightning-map>
+            <lightning-tabset>
+                <template for:each={tabs}
+                          for:item="item"
+                          if:true={tabs}>
+                    <lightning-tab label={item.label}
+                                   key={item.id}
+                                   value={item.value}
+                                   onactive={handleActive}>
+                        <ul class="slds-list--vertical slds-has-dividers--bottom-space">
+                            <template for:each={bizArray}
+                                      for:item="item"
+                                      if:true={bizArray}>
+                                <li key={item.id}
+                                    class="slds-list__item slds-grid slds-wrap">
+                                    <h3 class="slds-text-heading--small slds-m-bottom--x-small slds-size_1-of-1">
+                                        {item.name}</h3>
+
+                                    <p class="slds-size_1_of_2">
+                                        <img src={item.ratingImg} alt={item.rating} class="ratingStars slds-m-right_small" /> {item.reviewCount} reviews </p>
+                                        <span class="slds-col_bump-left"><lightning-formatted-number value={item.distance} maximum-fraction-digits="2"></lightning-formatted-number> miles</span>
+                                </li>
+                            </template>
+                        </ul>
+                    </lightning-tab>
+                </template>
+            </lightning-tabset>
+        </div>
+    </lightning-card>
+</template>
