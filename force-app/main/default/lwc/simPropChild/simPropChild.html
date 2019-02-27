@@ -41,6 +41,7 @@
         <template if:true={editMode}>
           <lightning-record-edit-form object-api-name="Property__c"
                                       record-id={theitem.Id}
+                                      layout-type="Full"
                                       onsuccess={handleSuccess}>
             <div class="slds-grid slds-wrap">
               <div class="slds-size_1-of-2">
@@ -58,21 +59,23 @@
               <div class="slds-size_1-of-1">
                 <lightning-input-field field-name="Broker__c"></lightning-input-field>
               </div>
+              <div class="slds-size_1-of-1">
               <div class="slds-m-top_large slds-grid slds-grid_align-center">
                 <lightning-button variant="neutral"
                                   label="Cancel"
                                   title="Cancel"
                                   type="text"
-                                  onclick={handleCancel}></lightning-button>
+                                  onclick={handleCancel} class="slds-m-right_small"></lightning-button>
                 <lightning-button variant="brand"
                                   label="Submit"
                                   title="Submit"
                                   type="submit"></lightning-button>
               </div>
             </div>
-          </lightning-record-edit-form>
-        </template>
       </div>
-    </div>
+      </lightning-record-edit-form>
+</template>
+</div>
+</div>
 
 </template>

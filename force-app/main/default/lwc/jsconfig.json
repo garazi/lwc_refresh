@@ -12,6 +12,9 @@
             "c/business-explorer": [
                 "businessExplorer/businessExplorer.js"
             ],
+            "c/business-explorer-item": [
+                "businessExplorerItem/businessExplorerItem.js"
+            ],
             "c/celebration": [
                 "celebration/celebration.js"
             ],
