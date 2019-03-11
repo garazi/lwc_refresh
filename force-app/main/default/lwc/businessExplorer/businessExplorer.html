@@ -4,9 +4,9 @@
                     class={flexipageRegionWidth}>
         <div class="slds-p-horizontal_medium">
             <lightning-map map-markers={mapMarkers}
-                           markers-title="In the area"
-                           zoom-level="16"
-                           class="foo"></lightning-map>
+                           markers-title={cardTitle}
+                           zoom-level={zoomLevel}
+                           ></lightning-map>
             <lightning-tabset>
                 <template for:each={tabs}
                           for:item="item"
@@ -15,11 +15,13 @@
                                    key={item.id}
                                    value={item.value}
                                    onactive={handleActive}>
-                        <ul class="slds-list_vertical slds-has-dividers_bottom-space">
+                        <ul class={cmpHeight}>
                             <template for:each={bizArray}
                                       for:item="item"
                                       if:true={bizArray}>
-                                      <c-business-explorer-item key={item.id} item={item} ></c-business-explorer-item>
+                                      <li key={item.id} class="slds-list__item">
+                                      <c-business-explorer-item  item={item} onselect={createMapMarkers}></c-business-explorer-item>
+                                      </li>
                             </template>
                         </ul>
                     </lightning-tab>

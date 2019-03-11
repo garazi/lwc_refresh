@@ -18,19 +18,24 @@ export default class BusinessExplorer extends LightningElement {
     @track tabs = [{ label: 'Shopping', value: 'shopping' }, { label: 'Schools', value: 'schools' }, { label: 'Restaurants', value: 'restaurants' }];
     @track currentTab = this.tabs[0].value;
     @track property;
+    @track cardTitle = this.currentTab + " in the Area"
     @track address;
     @track searchResults;
     @track bizArray;
     @track rating;
-    @track mapMarkers = [];
+    @track zoomLevel = "18";
+    @api mapMarkers = [];
     @api flexipageRegionWidth;
+    @api cmpHeight = "small";
+    @track heightCSS;
 
 
     @wire(getRecord, { recordId: '$recordId', fields })
     wiredProperty(value) {
         if (value.data) {
+            this.zoomLevel = "16";
             this.property = value.data;
-            this.address = this.property.fields.Address__c.value + ',' + this.property.fields.City__c.value + ',' + this.property.fields.State__c;
+            this.address = this.property.fields.Address__c.value + ', ' + this.property.fields.City__c.value + ', ' + this.property.fields.State__c.value;
             console.log("LOC: ", this.property.fields)
             this.mapMarkers = [{
                 location: {
@@ -62,12 +67,47 @@ export default class BusinessExplorer extends LightningElement {
         }
     }
 
+    renderedCallback() {
+        switch(this.cmpHeight) {
+            case 'small':
+                this.heightCSS = 'slds-list_vertical slds-has-dividers_bottom-space small';
+                break;
+            case 'medium':
+                this.heightCSS = 'slds-list_vertical slds-has-dividers_bottom-space medium';
+                break;
+            default:
+                this.heightCSS = 'slds-list_vertical slds-has-dividers_bottom-space large';
+        }
+
+    }
+
     handleActive(evt) {
         this.currentTab = evt.target.value;
     }
 
-    createMapMarkers(bizArray) {
+    createMapMarkers(event) {
+        console.log("We Fired: ", event.detail.latitude)
+
         let tempArray = [];
+        tempArray.push(this.mapMarkers[0]);
+        
+        let singleton = {
+            location: {
+                Street: event.detail.address,
+                City: event.detail.city,
+                Longitude: event.detail.longitude,
+                Latitude: event.detail.latitude
+            },
+            title: event.detail.title,
+            description: event.detail.description
+            }
+            tempArray.push(singleton);
+        console.log("SINGLE: ", singleton)
+        this.mapMarkers = tempArray;
+        this.zoomLevel = "13";
+        console.log("MAP: ", this.mapMarkers)
+
+        // tempArray.push(singleton);
         // bizArray.forEach(element => {
         //     let singleton = {
         // 		location: {
@@ -79,7 +119,5 @@ export default class BusinessExplorer extends LightningElement {
         // 	}
         // 	tempArray.push(singleton);
         // });
-        // this.mapMarkers = tempArray;
-        // console.log("MAP: ", this.mapMarkers)
     }
 }

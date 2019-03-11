@@ -21,6 +21,9 @@
             "c/form-builder": [
                 "formBuilder/formBuilder.js"
             ],
+            "c/hello-test": [
+                "helloTest/helloTest.js"
+            ],
             "c/hello-world": [
                 "helloWorld/helloWorld.js"
             ],
