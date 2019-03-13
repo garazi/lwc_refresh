@@ -19,23 +19,23 @@
         <template if:false={editMode}>
           <lightning-record-view-form object-api-name="Property__c"
                                       record-id={theitem.Id}>
-            <div class="slds-grid slds-wrap">
-              <div class="slds-size_1-of-2">
+            <lightning-layout multiple-rows>
+              <lightning-layout-item size="6">
                 <lightning-output-field field-name="Price__c"></lightning-output-field>
-              </div>
-              <div class="slds-size_1-of-2">
+              </lightning-layout-item>
+              <lightning-layout-item size="6">
                 <lightning-output-field field-name="Beds__c"></lightning-output-field>
-              </div>
-              <div class="slds-size_1-of-2">
+              </lightning-layout-item>
+              <lightning-layout-item size="6">
                 <lightning-output-field field-name="Baths__c"></lightning-output-field>
-              </div>
-              <div class="slds-size_1-of-2">
+              </lightning-layout-item>
+              <lightning-layout-item size="6">
                 <lightning-output-field field-name="Status__c"></lightning-output-field>
-              </div>
-              <div class="slds-size_1-of-1">
+              </lightning-layout-item>
+              <lightning-layout-item size="12">
                 <lightning-output-field field-name="Broker__c"></lightning-output-field>
-              </div>
-            </div>
+              </lightning-layout-item>
+            </lightning-layout>
           </lightning-record-view-form>
         </template>
         <template if:true={editMode}>
@@ -43,39 +43,40 @@
                                       record-id={theitem.Id}
                                       layout-type="Full"
                                       onsuccess={handleSuccess}>
-            <div class="slds-grid slds-wrap">
-              <div class="slds-size_1-of-2">
+            <lightning-layout multiple-rows>
+              <lightning-layout-item size="6">
                 <lightning-input-field field-name="Price__c"></lightning-input-field>
-              </div>
-              <div class="slds-size_1-of-2">
+              </lightning-layout-item>
+              <lightning-layout-item size="6">
                 <lightning-input-field field-name="Beds__c"></lightning-input-field>
-              </div>
-              <div class="slds-size_1-of-2">
+              </lightning-layout-item>
+              <lightning-layout-item size="6">
                 <lightning-input-field field-name="Baths__c"></lightning-input-field>
-              </div>
-              <div class="slds-size_1-of-2">
+              </lightning-layout-item>
+              <lightning-layout-item size="6">
                 <lightning-input-field field-name="Status__c"></lightning-input-field>
-              </div>
-              <div class="slds-size_1-of-1">
+              </lightning-layout-item>
+              <lightning-layout-item size="12">
                 <lightning-input-field field-name="Broker__c"></lightning-input-field>
-              </div>
-              <div class="slds-size_1-of-1">
-              <div class="slds-m-top_large slds-grid slds-grid_align-center">
-                <lightning-button variant="neutral"
-                                  label="Cancel"
-                                  title="Cancel"
-                                  type="text"
-                                  onclick={handleCancel} class="slds-m-right_small"></lightning-button>
-                <lightning-button variant="brand"
-                                  label="Submit"
-                                  title="Submit"
-                                  type="submit"></lightning-button>
-              </div>
-            </div>
+              </lightning-layout-item>
+              <lightning-layout-item size="12">
+                <div class="slds-m-top_large slds-grid slds-grid_align-center">
+                  <lightning-button variant="neutral"
+                                    label="Cancel"
+                                    title="Cancel"
+                                    type="text"
+                                    onclick={handleCancel}
+                                    class="slds-m-right_small"></lightning-button>
+                  <lightning-button variant="brand"
+                                    label="Submit"
+                                    title="Submit"
+                                    type="submit"></lightning-button>
+                </div>
+              </lightning-layout-item>
+            </lightning-layout>
+          </lightning-record-edit-form>
+        </template>
       </div>
-      </lightning-record-edit-form>
-</template>
-</div>
-</div>
+    </div>
 
 </template>
