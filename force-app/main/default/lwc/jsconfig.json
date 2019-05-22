@@ -3,40 +3,49 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
-            "c/aura-pubsub": [
+            "c/auraPubsub": [
                 "auraPubsub/auraPubsub.js"
             ],
-            "c/broker-card-lwc": [
+            "c/brokerCardLWC": [
                 "brokerCardLWC/brokerCardLWC.js"
             ],
-            "c/business-explorer": [
+            "c/businessExplorer": [
                 "businessExplorer/businessExplorer.js"
             ],
-            "c/business-explorer-item": [
+            "c/businessExplorerItem": [
                 "businessExplorerItem/businessExplorerItem.js"
             ],
             "c/celebration": [
                 "celebration/celebration.js"
             ],
-            "c/form-builder": [
+            "c/formBuilder": [
                 "formBuilder/formBuilder.js"
             ],
-            "c/hello-test": [
+            "c/helloTest": [
                 "helloTest/helloTest.js"
             ],
-            "c/hello-world": [
+            "c/helloWorld": [
                 "helloWorld/helloWorld.js"
+            ],
+            "c/propertyMapLWC": [
+                "propertyMapLWC/propertyMapLWC.js"
             ],
             "c/pubsub": [
                 "pubsub/pubsub.js"
             ],
-            "c/sim-prop": [
+            "c/simProp": [
                 "simProp/simProp.js"
             ],
-            "c/sim-prop-child": [
+            "c/simPropChild": [
                 "simPropChild/simPropChild.js"
             ],
-            "c/leaflet": [
+            "c/utility": [
+                "utility/utility.js"
+            ],
+            "c/weather": [
+                "weather/weather.js"
+            ],
+            "c/Leaflet": [
                 "../staticresources/Leaflet/Leaflet.js"
             ]
         }
@@ -44,5 +53,10 @@
     "include": [
         "**/*",
         "../../../../.sfdx/typings/lwc/**/*.d.ts"
-    ]
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
 }

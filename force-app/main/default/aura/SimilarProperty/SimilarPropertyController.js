@@ -19,6 +19,8 @@
         toastEvent.fire();
         var recUpdate = $A.get("e.c:RecordUpdated");
         recUpdate.fire();	
+        var pubsub = component.find('pubsub');
+        pubsub.fireEvent('propertyUpdated');
         helper.showHide(component);
     },
     handleCancel : function(component, event, helper) {

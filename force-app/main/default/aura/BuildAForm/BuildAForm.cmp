@@ -14,6 +14,11 @@
     
     <lightning:card iconName="{! v.icon}" title="{! v.title}">
         <div class="slds-p-left_large slds-p-right_medium">
+                <div class="slds-p-around_medium lgc-bg">
+                        <lightning:helptext
+        content="The tooltip displays on the lower left of the icon or above the icon if space is available. It automatically adjusts its position according to the viewport."
+    />
+                    </div>
             <lightning:recordForm aura:id="recordForm" 
                                   recordId="{!v.recordId}" 
                                   objectApiName="{!v.sObjectName}"

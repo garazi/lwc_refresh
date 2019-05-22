@@ -28,6 +28,7 @@ export default class BusinessExplorer extends LightningElement {
     @api flexipageRegionWidth;
     @api cmpHeight = "small";
     @track heightCSS;
+    @track loaded = false;
 
 
     @wire(getRecord, { recordId: '$recordId', fields })
@@ -60,6 +61,9 @@ export default class BusinessExplorer extends LightningElement {
             this.bizArray.forEach(element => {
                 element.rating = element.rating + " stars";
             });
+            this.loaded = true;
+            console.log("LOAD: ", this.loaded)
+
             console.log("DATA: ", JSON.parse(this.searchResults));
             // this.createMapMarkers(this.bizArray);
         } else if (value.error) {
@@ -78,16 +82,16 @@ export default class BusinessExplorer extends LightningElement {
             default:
                 this.heightCSS = 'slds-list_vertical slds-has-dividers_bottom-space large';
         }
-
     }
 
     handleActive(evt) {
         this.currentTab = evt.target.value;
+        this.loaded = false;
+        console.log("LOAD: ", this.loaded)
+
     }
 
     createMapMarkers(event) {
-        console.log("We Fired: ", event.detail.latitude)
-
         let tempArray = [];
         tempArray.push(this.mapMarkers[0]);
         

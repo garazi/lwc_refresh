@@ -3,37 +3,22 @@
 	<aura:attribute name="myVal" type="String" default="hello" />
 	<aura:attribute name="maxChar" type="Integer" default="10" />
 	<aura:attribute name="currentChar" type="Integer" />
+	<aura:attribute name="options" type="List" default="[
+    {'label': 'Sales', 'value': 'option1'},
+    {'label': 'Force', 'value': 'option2'}
+    ]"/>
+		<aura:attribute name="value" type="String" default="option1"/>
 
   <force:recordData aura:id="propertyService" recordId="{!v.recordId}" targetRecord="{!v.property}"  layoutType="FULL" />
 
 	<lightning:card title="A Simple Demo" iconName="custom:custom42">
 		<div class="slds-p-horizontal_small">
-				<!-- <lightning:inputRichText
-				value="{!v.myVal}"
-				disableCategories="FORMAT_TEXT"
-				formats="['font', 'size', 'bold', 'italic', 'underline',
-                   'strike', 'list', 'indent', 'align', 'link',
-                   'image', 'clean', 'table', 'header', 'color']">>
-				</lightning:inputRichText> -->
-
-				<!-- <lightning:formattedAddress street="121 Spear St." city="San Francisco" country="US" province="CA" postalCode="94105" showStaticMap="true" />
-				<lightning:inputAddress street="121 Spear St." city="San Francisco" country="US" province="CA" postalCode="94105" showAddressLookup="true" />
-				<lightning:input type="number" name="input1" label="Enter a number" /> -->
-				<!-- <lightning:textarea
-				aura:id="myTextarea"
-        type="text"
-        value="test1" 
-        required="true"
-        messageWhenPatternMismatch="Too many characters!"
-				pattern=".{0,10}"
-				maxlength="{!v.maxChar}"
-        name="input-name"
-				label="Enter up to 10 characters"
-				onchange="{!c.handleChange}"
-				/>
-				<p>{!v.currentChar} / {!v.maxChar}</p>
-				<lightning:input type="text" messageWhenPatternMismatch="Too many characters!" pattern=".{0,5}" name="input-name" label="Enter up to 5 characters" /> -->
-				<lightning:inputRichText value="{!v.myVal}" placeholder="Type something interesting" class="foo"/>
+			<lightning:radioGroup name="radioGroup"
+			label="Radio Group"
+			options="{! v.options }"
+			value="{! v.value }"
+			type="radio"
+			variant="label-hidden"/>
 		</div>
 	</lightning:card>
 </aura:component>

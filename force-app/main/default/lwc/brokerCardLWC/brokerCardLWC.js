@@ -22,7 +22,7 @@ export default class brokerCard extends LightningElement {
             this.cardTitle = 'Broker for ' + this.property.fields.Name.value;
             this.brokerId = this.property.fields.Broker__c.value;
         } else if (value.error) {
-            console.log("OOOPS: ", value.error)
+            console.log("ERROR: ", value.error)
         }
     }
 

@@ -1,8 +1,8 @@
 import { LightningElement, api, track, wire } from 'lwc';
-import { NavigationMixin } from 'lightning/navigation';
+
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { registerListener, unregisterAllListeners, fireEvent } from 'c/pubsub';
-import { CurrentPageReference } from 'lightning/navigation';
+import { NavigationMixin, CurrentPageReference } from 'lightning/navigation';
 
 export default class SimPropChild extends NavigationMixin(LightningElement) {
     @api theitem;
@@ -22,7 +22,7 @@ export default class SimPropChild extends NavigationMixin(LightningElement) {
     }
 
     editRecord() {
-        this.editMode=true;
+        this.editMode = true;
     }
 
     handleSuccess() {
@@ -33,7 +33,6 @@ export default class SimPropChild extends NavigationMixin(LightningElement) {
             });
             this.dispatchEvent(evt);
             fireEvent(this.pageRef, 'propertyUpdated');
-            fireEvent(this.pageRef, "startAnimation", "Sold");
             this.editMode=false;
     }
 

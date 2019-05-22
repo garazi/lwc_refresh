@@ -1,0 +1,23 @@
+.card {
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: bisque;
+    padding: 15px;
+}
+
+.icon {
+    font-size: 3em;
+    margin: 10px;
+}
+
+.title {
+    font-size: 1.25em;
+}
+
+.temperature {
+    font-size: 1.25em;
+}
+
+.convert {
+    font-size: 1.25em;
+}

@@ -4,5 +4,6 @@
     <aura:dependency resource="c:BrokerCard" />
     <aura:dependency resource="c:BrokerDetails" />
     <aura:dependency resource="c:BuildAForm" />
+    <aura:dependency resource="c:brokerCardLWC" />
     <aura:dependency resource="markup://force:*" type="EVENT"/>
 </aura:application>
