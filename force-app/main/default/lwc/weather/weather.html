@@ -1,25 +1,19 @@
 <template>
-    <lightning-card title={cardTitle}
-                    icon-name="custom:custom3">
-                    <lightning-input type="toggle" label="Show Weather" name="input1" slot="actions" onchange={handleToggle} message-toggle-active="" message-toggle-inactive=""></lightning-input>
-        <div class="slds-card__body_inner">
-            <lightning-map map-markers={mapMarkers} zoom-level={zoomLevel}></lightning-map>
-            <template if:true={showWeather}>
-            <lightning-layout>
-                <lightning-layout-item size='2' class="slds-align_absolute-center">
-                    <div class="icon">{weatherIcon}</div>
-                </lightning-layout-item>
-                <lightning-layout-item class="slds-align_absolute-center">
-                    <div class="title">{weatherState}</div>
-                </lightning-layout-item>
-                <lightning-layout-item size='2' class="slds-align_absolute-center">
-                    <div class="temperature">{weatherTemperature}</div>
-                </lightning-layout-item>
-                <lightning-layout-item size='2' class="slds-align_absolute-center">
-                    <div class="convert">{weatherTemperatureConversion}</div>
-                </lightning-layout-item>
-            </lightning-layout>
-            </template>
-        </div>
-    </lightning-card>
+    <lightning-layout>
+        <lightning-layout-item size='2'
+                               class="slds-align_absolute-center">
+            <div class="icon">{weatherIcon}</div>
+        </lightning-layout-item>
+        <lightning-layout-item class="slds-align_absolute-center">
+            <div class="title">{weatherState}</div>
+        </lightning-layout-item>
+        <lightning-layout-item size='2'
+                               class="slds-align_absolute-center">
+            <div class="temperature">{weatherTemperature}</div>
+        </lightning-layout-item>
+        <lightning-layout-item size='2'
+                               class="slds-align_absolute-center">
+            <div class="convert">{weatherTemperatureConversion}</div>
+        </lightning-layout-item>
+    </lightning-layout>
 </template>

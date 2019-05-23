@@ -1,8 +1,9 @@
 <template>
-        <lightning-card title="Weather"
+        <lightning-card title={cardTitle}
                         icon-name="custom:custom3">
             <div class="slds-card__body_inner">
-                <lightning-map map-markers={mapMarkers}></lightning-map>
+                <lightning-map map-markers={mapMarkers} zoom-level="12"></lightning-map>
+                <c-weather city={city}></c-weather>
             </div>
         </lightning-card>
     </template>
