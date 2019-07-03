@@ -6,9 +6,7 @@ The is the Dreamhouse application for use with the Lightning Components BRK at D
 You will need to have SFDX (Salesforce CLI) installed and VS Code.
 
 * Using the CLI, navigate into the folder you created and execute the following command:
-    * `git clone https://github.com/garazi/compCode.git Dreamhouse_LWC_Demo`
-* Using the CLI, navigate into the newly created folder “Dreamhouse_LWC_Demo” and execute:
-    * `git checkout -b version2`
+    * `git clone https://github.com/garazi/lwc_refresh.git Dreamhouse_LWC_Demo`
 * Log into your devhub with the following:
     * `sfdx force:auth:web:login -a dfDevHub`
 
