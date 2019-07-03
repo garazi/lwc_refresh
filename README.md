@@ -19,7 +19,7 @@ You will need to have SFDX (Salesforce CLI) installed and VS Code.
     * `sfdx force:source:push`
     * `sfdx force:user:permset:assign -n All_Access`
 
-### SCRATCH ORG ONLY (for use with the Developer Console)
+### SCRATCH ORG ONLY
 If you only intend to use the Developer Console, you can click this button to create a scratch org.
 
 [![Deploy](https://deploy-to-sfdx.com/dist/assets/images/DeployToSFDX.svg)](https://sfdx-deployer-app.herokuapp.com/launch?template=https://github.com/garazi/lwc_refresh)
