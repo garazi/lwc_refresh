@@ -1,6 +1,6 @@
-# Dreamhouse_BRK
+# Greg's Dreamhouse App
 
-The is the Dreamhouse application for use with the Lightning Components BRK at Dreamforce, TrailheaDX and Salesforce World Tours.
+The is the Dreamhouse application created by Greg for demos of Lightning Components.
 
 ### SFDX SETUP
 You will need to have SFDX (Salesforce CLI) installed and VS Code.
